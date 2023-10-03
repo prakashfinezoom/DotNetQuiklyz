@@ -29,6 +29,19 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: 
+    dotnet new nunit -n PlaywrightTests
+    cd PlaywrightTests
+  displayName: Playwright Folder
+  
+- script: 
+    dotnet add package Microsoft.Playwright.NUnit
+  displayName: Adding NUnit
+
+- script:
+    dotnet build
+  displayName: DotNet Build
+
+- script: 
     dotnet build
   displayName: DotnetBuild
 
