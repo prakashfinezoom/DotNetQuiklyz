@@ -27,10 +27,6 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- script: 
-    dotnet new nunit -n PlaywrightTests
-  displayName: Playwright Folder
   
 - script: 
     dotnet add package Microsoft.Playwright.NUnit
