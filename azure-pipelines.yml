@@ -33,7 +33,7 @@ steps:
   displayName: Powershell installation
     
 - script: | 
-   pwsh bin/Debug/net7.0/playwright.ps1 install
+   pwsh PlaywrightTests\bin\Debug\net7.0\playwright.ps1 install
   displayName: Playwright browser
 
 - task: VSTest@2
