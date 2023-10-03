@@ -29,6 +29,14 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: 
+    dotnet add package Microsoft.Playwright.NUnit
+  displayName: Adding NUnit
+
+- script: 
+    dotnet build
+  displayName: DotnetBuild
+
+- script: 
    dotnet tool install --global PowerShell
   displayName: Powershell installation
     
