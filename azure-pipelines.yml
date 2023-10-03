@@ -28,13 +28,13 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- script: 
-   dotnet tool install --global PowerShell
-  displayName: Powershell installation
+#- script: 
+#   dotnet tool install --global PowerShell
+#  displayName: Powershell installation
     
-- script: | 
-   pwsh PlaywrightTests\bin\Debug\net7.0\playwright.ps1 install
-  displayName: Playwright browser
+#- script: | 
+ #  pwsh PlaywrightTests\bin\Debug\net7.0\playwright.ps1 install
+  #displayName: Playwright browser
 
 - task: VSTest@2
   inputs:
